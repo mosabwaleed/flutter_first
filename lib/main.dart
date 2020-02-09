@@ -29,23 +29,26 @@ class Mo3enHome extends StatelessWidget {
                   ),
 
               Row (
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                     Flexible (
-                      flex: 2,
+                      flex: 4,
                       child : AspectRatio (
-                        aspectRatio: 2/2,
+                        aspectRatio: 3/2,
                         child : Container (
+                          width: 200,
                           child: Image(image : AssetImage ('assets/learn.jpg'),) ,
                         )
                     ),
                   ),
                   Flexible (
-                    flex: 3,
+                    flex: 4,
                     child : AspectRatio (
                         aspectRatio: 2/2,
                         child : Container (
+                          height: 200,
+                          //margin: EdgeInsets.all(10.0),
                           child: Image(image : AssetImage ('assets/technology.jpg'),) ,
                         )
                     ),
