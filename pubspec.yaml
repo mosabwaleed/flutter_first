@@ -47,6 +47,15 @@ flutter:
     - assets/learn.jpg
     - assets/social.jpg
     - assets/technology.jpg
+    - assets/subassets/computers.jpg
+    - assets/subassets/family-relations.jpg
+    - assets/subassets/General-Medicine.jpg
+    - assets/subassets/learning-difficulties.jpg
+    - assets/subassets/manage.jpg
+    - assets/subassets/psychological-guidance.jpg
+    - assets/subassets/smart-phones.jpg
+    - assets/subassets/socondry.jpg
+    - assets/subassets/University-pressures.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

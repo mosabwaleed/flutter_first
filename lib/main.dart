@@ -1,8 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_first/Subsections.dart';
 
 void main() => runApp(MaterialApp(
   home: Mo3enHome(),
+  routes: {
+    '/sub': (context) => SubSections() ,
+  },
   debugShowCheckedModeBanner: false,
 ));
 
@@ -28,8 +32,9 @@ class _Mo3enHomeState extends State<Mo3enHome> {
                 Flexible (
                       flex: 1,
                       child : FlatButton(
-                        onPressed: null,
-                        //padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                        onPressed :() {
+                          Navigator.pushNamed (context , '/sub');
+                        },
                           child: Image(image : AssetImage ('assets/doctor.jpg'),
                             width: 700,
                             ),
