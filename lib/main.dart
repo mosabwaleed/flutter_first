@@ -20,70 +20,74 @@ class _Mo3enHomeState extends State<Mo3enHome> {
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
-      body: Column (
-            children: <Widget>[
-              SizedBox (height: 10.0,),
-              Flexible (
-                    flex: 1,
-                    child : FlatButton(
-                      onPressed: null,
-                        child: Image(image : AssetImage ('assets/doctor.jpg'),width: 700,),
+      body: SingleChildScrollView(
+        child: Column (
+           mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                SizedBox (height: 10.0,),
+                Flexible (
+                      flex: 1,
+                      child : FlatButton(
+                        onPressed: null,
+                        //padding: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+                          child: Image(image : AssetImage ('assets/doctor.jpg'),
+                            width: 700,
+                            ),
+                      ),
                     ),
-                  ),
-              SizedBox (
-                height: 5.0,
-              ),
-              Row (
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  SizedBox (
-                    width:10,
-                  ),
+                SizedBox (
+                  height: 5.0,
+                ),
+                Row (
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox (
+                      width:10,
+                    ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Flexible (
+                            child : FlatButton(
+                              onPressed: null,
+                              padding: EdgeInsets.fromLTRB(0.0, 5.0, 5.0, 0.0),
+                                child: Image(image : AssetImage ('assets/learn.jpg'), width: 180,),
+                            ),
+                    ),
+                              Flexible (
+                                child : FlatButton(
+                                  padding: EdgeInsets.fromLTRB(0.0, 5.0, 5.0, 0.0),
+                                  child: Image(image : AssetImage ('assets/enterr.jpg'),width: 180,) ,
+                                  onPressed: null,
+                                ),
+                              ),
+                        ],
+                      ),
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
                         Flexible (
-                          child : FlatButton(
-                            onPressed: null,
-                            padding: EdgeInsets.fromLTRB(0.0, 5.0, 5.0, 0.0),
-                              child: Image(image : AssetImage ('assets/learn.jpg'), width: 180,),
-                          ),
-                  ),
-                            Flexible (
                               child : FlatButton(
-                                padding: EdgeInsets.fromLTRB(0.0, 5.0, 5.0, 0.0),
-                                child: Image(image : AssetImage ('assets/enterr.jpg'),width: 180,) ,
+                                padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+                                child: Image(image : AssetImage ('assets/technology.jpg'),width: 200,) ,
                                 onPressed: null,
-                              ),
-                            ),
-
-
+                          ),
+                        ),
+                        Flexible (
+                          child : FlatButton(
+                            padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
+                            child: Image(image : AssetImage ('assets/social.jpg'),width: 200,) ,
+                            onPressed: null,
+                          ),
+                        ),
                       ],
                     ),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Flexible (
-                            child : FlatButton(
-                              padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-                              child: Image(image : AssetImage ('assets/technology.jpg'),width: 200,) ,
-                              onPressed: null,
-                        ),
-                      ),
-                      Flexible (
-                        child : FlatButton(
-                          padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
-                          child: Image(image : AssetImage ('assets/social.jpg'),width: 200,) ,
-                          onPressed: null,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+        ),
       ),
 
 
