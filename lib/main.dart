@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_first/Subsections.dart';
+import 'package:flutter_first/ScreenArguments.dart';
 
 void main() => runApp(MaterialApp(
   home: Mo3enHome(),
@@ -11,11 +12,13 @@ void main() => runApp(MaterialApp(
 ));
 
 class Mo3enHome extends StatefulWidget {
+  static const routeName = '/main';
   @override
   _Mo3enHomeState createState() => _Mo3enHomeState();
 }
 
 class _Mo3enHomeState extends State<Mo3enHome> {
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold (
@@ -33,7 +36,13 @@ class _Mo3enHomeState extends State<Mo3enHome> {
                       flex: 1,
                       child : FlatButton(
                         onPressed :() {
-                          Navigator.pushNamed (context , '/sub');
+                          Navigator.pushNamed(
+                            context,
+                            SubSections.routeName,
+                            arguments: ScreenArguments(
+                              'midicine'
+                            ),
+                          );
                         },
                           child: Image(image : AssetImage ('assets/doctor.jpg'),
                             width: 700,
@@ -56,7 +65,15 @@ class _Mo3enHomeState extends State<Mo3enHome> {
                         children: <Widget>[
                           Flexible (
                             child : FlatButton(
-                              onPressed: null,
+                              onPressed :() {
+                                Navigator.pushNamed(
+                                  context,
+                                  SubSections.routeName,
+                                  arguments: ScreenArguments(
+                                      'learn'
+                                  ),
+                                );
+                              },
                               padding: EdgeInsets.fromLTRB(0.0, 5.0, 5.0, 0.0),
                                 child: Image(image : AssetImage ('assets/learn.jpg'), width: 180,),
                             ),
@@ -77,14 +94,30 @@ class _Mo3enHomeState extends State<Mo3enHome> {
                               child : FlatButton(
                                 padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
                                 child: Image(image : AssetImage ('assets/technology.jpg'),width: 200,) ,
-                                onPressed: null,
+                                onPressed :() {
+                                  Navigator.pushNamed(
+                                    context,
+                                    SubSections.routeName,
+                                    arguments: ScreenArguments(
+                                        'midicine'
+                                    ),
+                                  );
+                                },
                           ),
                         ),
                         Flexible (
                           child : FlatButton(
                             padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
                             child: Image(image : AssetImage ('assets/social.jpg'),width: 200,) ,
-                            onPressed: null,
+                            onPressed :() {
+                              Navigator.pushNamed(
+                                context,
+                                SubSections.routeName,
+                                arguments: ScreenArguments(
+                                    'midicine'
+                                ),
+                              );
+                            },
                           ),
                         ),
                       ],
