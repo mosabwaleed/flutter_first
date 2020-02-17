@@ -1,4 +1,4 @@
-package com.mosab.flutter_first;
+package com.biscuit.mo3en;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
