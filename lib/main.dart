@@ -82,7 +82,15 @@ class _Mo3enHomeState extends State<Mo3enHome> {
                                 child : FlatButton(
                                   padding: EdgeInsets.fromLTRB(0.0, 5.0, 5.0, 0.0),
                                   child: Image(image : AssetImage ('assets/enterr.jpg'),width: 180,) ,
-                                  onPressed: null,
+                                  onPressed :() {
+                                    Navigator.pushNamed(
+                                      context,
+                                      SubSections.routeName,
+                                      arguments: ScreenArguments(
+                                          'enterr'
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
                         ],
@@ -99,7 +107,7 @@ class _Mo3enHomeState extends State<Mo3enHome> {
                                     context,
                                     SubSections.routeName,
                                     arguments: ScreenArguments(
-                                        'midicine'
+                                        'technology'
                                     ),
                                   );
                                 },
@@ -114,7 +122,7 @@ class _Mo3enHomeState extends State<Mo3enHome> {
                                 context,
                                 SubSections.routeName,
                                 arguments: ScreenArguments(
-                                    'midicine'
+                                    'social'
                                 ),
                               );
                             },
